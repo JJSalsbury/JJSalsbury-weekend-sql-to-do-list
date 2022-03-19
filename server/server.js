@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(express.static('server/public'));
 
 // Setup the songs router
-// to respond to requests from the `/songs` URL
+// to respond to requests from the `/tasks` URL
 let tasksRouter = require('./routes/tasks.router');
 app.use('/tasks', tasksRouter);
 

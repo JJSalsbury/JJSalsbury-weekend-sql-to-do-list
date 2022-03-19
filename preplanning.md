@@ -22,9 +22,18 @@
 ​
 ### Server
 ​
-[ ]  
-[ ] 
-​
+[ ]  express
+[ ]  body-parser
+[ ]  router (tasksRouter)
+
+
+### DOM
+[ ] Create a front end experience that allows a user to create a Task.  
+    [ ] Create input fields in index.html.  
+    [ ] Create button to submit user input.
+        => handle data flow on client side, server and database. (See tasks above). 
+
+
 ### Client
 1. Setup "getter" FUNCTIONS for inputs on DOM:
     [ ] $(document),ready:
@@ -40,24 +49,19 @@
     [ ] Create addTasks function, write an ajax POST request.  
         [ ] Add POST request to url /tasks_library as .then promise.  
 
-3. When a Task is complete, its visual representation should change on the front end.  
+3.1. When a Task is complete, its visual representation should change on the front end.  
     (updates "Task Complete" table header in the database.)
     [ ] Create taskComplete function, write ajax PUT request.  //??
         [ ] Change background of the task container could change from red to green.
-        [ ] Create taskComplete function, write ajax POST request as.then promise //??
+        [ ] Create taskComplete function, write ajax POST request as.then promise.  //??
 
-[ ] Create renderToDom function to render data to DOM.
+3.2. Whether or not a Task is complete should also be stored in the database.  
+    [ ] Create function for PUT request to update 'ready to transfer'.   
+
+4. [ ] Create renderToDom function to render data to DOM.
     [ ] Each task should have an option to 'Complete' or 'Delete':
         [ ] Add complete/delete buttons in append code block.   
         
-[ ] Create function for PUT request to update 'ready to transfer'.  
-
-​
-### DOM
-[ ] Create a front end experience that allows a user to create a Task.  
-    [ ] Create input fields in index.html.  
-    [ ] Create button to submit user input.
-        => handle data flow on client side, server and database. (See tasks above). 
 
 **Here are the specific components for the challenge:**
 
