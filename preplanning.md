@@ -4,7 +4,8 @@
 ​
 [x] Power on laptop.   
 [ ] Install npm libraries, as needed needed. 
-    [x] express, pg.  
+    [x] express, pg. 
+[ ] Create Pool. 
 ​
 ### Database
 ​
@@ -12,11 +13,11 @@
      
 [ ] Connect the database to the server w/ pb  
     [ ] GET request  
-            -get current koala list  
+            -get database "tasks_library"  
     [ ] POST request  
-            -add koala to database  
+            -add a task to database  
     [ ] PUT request  
-            -update 'ready to transfer'   
+            -update 'task complete'   
     [ ] STRETCH - DELETE  
 ​
 ### Server
@@ -25,24 +26,38 @@
 [ ] 
 ​
 ### Client
-[ ] Setup "getter" FUNCTIONS for inputs on DOM:  
+1. Setup "getter" FUNCTIONS for inputs on DOM:
+    [ ] $(document),ready:
+        [ ] Call necessary functions on ready.  
+            [ ] Create clickListener function.  //?
+            [ ] Call to getTasks function. (See functions below). //?
+
     [ ] Create getTasks function (function gets data from the database).  
         [ ] Ajax GET request to url /tasks_library (from database).  
         [ ] Call renderToDom function in .then promise.  
-[ ] When the Task is created, it should be stored inside of a database (SQL).  
-    [ ] Create addTasks function, write an ajax POST request.  
-        [ ] Ajax POST request to url /tasks_library as .then promise.  
 
-        
-[ ] Create function for PUT request to update 'ready to transfer'.  
-[ ] Create renderToDom function to render to DOM.
+2. When the Task is created, it should be stored inside of a database (SQL).  
+    [ ] Create addTasks function, write an ajax POST request.  
+        [ ] Add POST request to url /tasks_library as .then promise.  
+
+3. When a Task is complete, its visual representation should change on the front end.  
+    (updates "Task Complete" table header in the database.)
+    [ ] Create taskComplete function, write ajax PUT request.  //??
+        [ ] Change background of the task container could change from red to green.
+        [ ] Create taskComplete function, write ajax POST request as.then promise //??
+
+[ ] Create renderToDom function to render data to DOM.
     [ ] Each task should have an option to 'Complete' or 'Delete':
         [ ] Add complete/delete buttons in append code block.   
+        
+[ ] Create function for PUT request to update 'ready to transfer'.  
+
 ​
 ### DOM
 [ ] Create a front end experience that allows a user to create a Task.  
     [ ] Create input fields in index.html.  
-    [ ] Create button to submit user input.  
+    [ ] Create button to submit user input.
+        => handle data flow on client side, server and database. (See tasks above). 
 
 **Here are the specific components for the challenge:**
 
