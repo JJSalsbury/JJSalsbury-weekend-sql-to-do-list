@@ -3,9 +3,9 @@
 }
 
 .taskStatusCls {
-    background-color: red;
+    background-color: red !important;
 }
 
 .taskCompleteCls {
-    background-color: green;
+    background-color: green !important;
 }

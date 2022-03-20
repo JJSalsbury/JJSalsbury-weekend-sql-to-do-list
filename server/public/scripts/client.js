@@ -55,6 +55,7 @@ function addTask(newTask) {
     }).then(function (response) {
         console.log('Response from sever', response);
         getTasks();
+        $('input').val('');
     }).catch(function (err) {
         console.log('Error in POST', err);
     })
