@@ -12,7 +12,7 @@ Once user input is submitted using a submit button, the app collects the informa
 ### Prerequisites
 
 - [Jquery.js](https://jquery.com/)
-- [[node.js](https://nodejs.org/en/)
+- [node.js](https://nodejs.org/en/)
 - [postico](https://eggerapps.at/postico/)
 
 ## Usage
