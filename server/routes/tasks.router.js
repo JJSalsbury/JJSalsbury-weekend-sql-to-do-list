@@ -5,7 +5,7 @@ const express = require('express');
 //Requiring tasksRouter.
 const tasksRouter = express.Router();
 
-//
+//Requiring pool router module.
 const pool = require('../modules/pool');
 
 // GET
@@ -49,46 +49,46 @@ tasksRouter.put('/:id', (req, res) => {
     console.log(req.body.read, req.params.id);
     // res.sendStatus(200);   //whacked during handleRank function process
     let queryText = `UPDATE "tasks" SET "task_complete" = NOT "task_complete" WHERE "id" = $1;`;
-  
+
     //created values for data security ("values is taco")
     const values = [req.params.id];
     console.log(req.params.id);
-  
+
     pool.query(queryText, values)
-    .then( result => {
-        res.sendStatus(200);
-    })
-    .catch( err => {
-        console.log(err);
-        res.sendStatus(500);
-    });
+        .then(result => {
+            res.sendStatus(200);
+        })
+        .catch(err => {
+            console.log(err);
+            res.sendStatus(500);
+        });
 
 
-  });
+});
 
-  //DELETE route to localhost:5000/tasks.
-  tasksRouter.delete('/:id', (req, res) =>  {
+//DELETE route to localhost:5000/tasks.
+tasksRouter.delete('/:id', (req, res) => {
     //req.params is USED FOR DELETE... params.name should match identifier '/:id'
     console.log('DELETE Route good:', req.params.id);
-    
+
     // res.sendStatus(200);
     const queryText = `DELETE FROM "tasks"
     WHERE "id" = $1;
     `;
-  
+
     //created values for data security ("values is taco")
     const values = [req.params.id];
     console.log(req.params.id);
     //in the parameters, make sure to add variable name... in this case, "values"...
     pool.query(queryText, values)
-    .then(result => {
-        res.sendStatus(204);
-    }).catch(err => {
-        console.log(err)
-        res.sendStatus(500);
-    })
-  });
+        .then(result => {
+            res.sendStatus(204);
+        }).catch(err => {
+            console.log(err)
+            res.sendStatus(500);
+        })
+});
 
 
 //taskRouter Module.
-module.exports= tasksRouter;
+module.exports = tasksRouter;

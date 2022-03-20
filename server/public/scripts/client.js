@@ -84,14 +84,15 @@ function render(tasks) {
             `)
 
         } else {
-        row = $(`
+            row = $(`
         <tr>
           <td>${task.id}</td>
           <td class="taskCompleteCls">${task.task_to_do}</td>
           <td class="taskUpdateCls"><button class="taskCompleteBtnCls">Change Task Status</button></td>
           <td><button class="deleteBtnCls">Delete</button></td>
         </tr>
-        `)}
+        `)
+        }
 
         row.data('task', task);
         $('#viewTasksId').append(row);
@@ -133,18 +134,18 @@ function handleDeleteTask() {
     //On click targeting closest tr and task data
     let task = $(this).closest('tr').data('task');
     let id = task.id;
-        //Created ajax DELETE req to remove data from the database.
-        $.ajax({
-          url: `/tasks/${task.id}`,
-          method: 'DELETE',
-  
-      }).then(function(response) {
-          console.log('deleted!');
-          //must call function here to take delete info off the dom on button click, and not after you refresh the page
-          getTasks();
-      }).catch(function(err) {
-          console.log(err)
-      })//end of ajax req adding delete....
-      console.log(id);
-  }//End of handleDeleteTask function.
+    //Created ajax DELETE req to remove data from the database.
+    $.ajax({
+        url: `/tasks/${task.id}`,
+        method: 'DELETE',
+
+    }).then(function (response) {
+        console.log('deleted!');
+        //must call function here to take delete info off the dom on button click, and not after you refresh the page
+        getTasks();
+    }).catch(function (err) {
+        console.log(err)
+    })//end of ajax req adding delete....
+    console.log(id);
+}//End of handleDeleteTask function.
   //Call to initiate on button click.

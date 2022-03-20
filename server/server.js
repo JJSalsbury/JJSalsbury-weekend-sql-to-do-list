@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 // from the server/public folder
 app.use(express.static('server/public'));
 
-// Setup the songs router
+// Setup tasks router
 // to respond to requests from the `/tasks` URL
 let tasksRouter = require('./routes/tasks.router');
 app.use('/tasks', tasksRouter);
