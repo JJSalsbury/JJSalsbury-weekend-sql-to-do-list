@@ -6,7 +6,7 @@ const pg = require('pg');
 const Pool = pg.Pool;
 const pool = new Pool({
     //must be given an object. Inside of this is config to talk to Postgres!
-    //database: keystyl will have to be changed from project to project 
+
     database: 'tasks_library',
     host: 'localhost',
     port: 5432,
