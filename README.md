@@ -30,8 +30,8 @@ Once user input is submitted using a submit button, the app collects the informa
 4. Add Tasks! Click the 'Change Task Status' button, to update your tasks.
 
 NOTE:
-Tasks still in-progress will appear as GREEN.
-Tasks completed will appear in RED.
+Tasks completed will appear in GREEN.
+Tasks still in-progress will appear in RED.
 You may delete a task, at anytime, by clicking the 'Delete' button!
 
 
