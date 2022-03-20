@@ -1,5 +1,10 @@
-.body {
-    background-color: lightgray;
+body {
+    text-align: center;
+    /* background-image: url(../styles/istockphoto-1285308242-170667a.png);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    background-color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
 }
 
 .taskStatusCls {
@@ -9,3 +14,60 @@
 .taskCompleteCls {
     background-color: green !important;
 }
+
+#greenId {
+    background-color: green;
+    color: white;
+}
+
+#redId {
+    background-color: red;
+    color: white;
+}
+
+#headerId {
+    padding-top: 25px;
+    background-image: linear-gradient(to top, darkgray, whitesmoke);
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+#titleId {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#h2Id{
+    font-weight: bold ;
+}
+
+#h3Id{
+    font-style: italic;
+}
+
+#taskId {
+    padding-top: 15px;
+    background-image: linear-gradient(to top, darkgray, whitesmoke);
+    padding-bottom: 35px;
+}
+
+#taskH2Id {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#tableSectionId {
+    margin-top: 20px;
+    background-image: linear-gradient(to top, darkgray, whitesmoke);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+#tableH2Id {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+

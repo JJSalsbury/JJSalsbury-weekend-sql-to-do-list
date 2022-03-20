@@ -1,10 +1,15 @@
+//Installed express module in node. 
+
+//Importing/requiring express library.
 const express = require('express');
+//Requiring tasksRouter.
 const tasksRouter = express.Router();
 
-//added static services for server
+//
 const pool = require('../modules/pool');
 
 // GET
+//GET route to localhost:5000/tasks.
 tasksRouter.get('/', (req, res) => {
     console.log('GET Route good');
     let queryText = 'SELECT * FROM "tasks" ORDER BY "id";';
@@ -16,7 +21,7 @@ tasksRouter.get('/', (req, res) => {
     })
 })
 
-// POST
+//POST route to localhost:5000/tasks.
 tasksRouter.post('/', (req, res) => {
     console.log('POST Route good');
     let newTask = req.body;
@@ -38,7 +43,7 @@ tasksRouter.post('/', (req, res) => {
         });
 })
 
-//PUT
+//PUT route to localhost:5000/tasks.
 tasksRouter.put('/:id', (req, res) => {
     console.log('PUT Route good:', req.params.id);
     console.log(req.body.read, req.params.id);
@@ -61,7 +66,7 @@ tasksRouter.put('/:id', (req, res) => {
 
   });
 
-  //DELETE:
+  //DELETE route to localhost:5000/tasks.
   tasksRouter.delete('/:id', (req, res) =>  {
     //req.params is USED FOR DELETE... params.name should match identifier '/:id'
     console.log('DELETE Route good:', req.params.id);
@@ -85,12 +90,5 @@ tasksRouter.put('/:id', (req, res) => {
   });
 
 
-
-
-
-
-
-
-
-//bottom
+//taskRouter Module.
 module.exports= tasksRouter;
