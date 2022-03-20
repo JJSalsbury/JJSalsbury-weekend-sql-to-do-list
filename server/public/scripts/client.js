@@ -41,7 +41,7 @@ function getTasks() {
         console.log('error in GET', err);
     });
 
-} // end getTasks
+} // end getTasks function.
 //Call to initiate in onReady function.
 
 //Add new task! 
@@ -58,7 +58,8 @@ function addTask(newTask) {
     }).catch(function (err) {
         console.log('Error in POST', err);
     })
-}
+}//End addTask function.
+//Call to initiate clickListener function.
 
 //renders to the DOM 
 function render(tasks) {
@@ -83,15 +84,12 @@ function render(tasks) {
         </tr>
         `)}
 
-        // ${task.task_complete}
-
-        //Create conditional that adds ready to transfer button
-
         row.data('task', task);
         $('#viewTasksId').append(row);
         $('#taskColorCls').append(row);
     }
-}
+}//End of render function.
+//Call to initiate in getTask function.
 
 function handleTaskStatus() {
     console.log('In handleTaskStatus function');
@@ -112,9 +110,9 @@ function handleTaskStatus() {
 
     }).catch(function (err) {
         console.log(err)
-    })//
-
-}
+    })
+}//End of handleTaskStatus function.
+//Call to initiate on button click.
 
 function handleDeleteTask() {
     console.log('Task Deleted!');
@@ -136,4 +134,5 @@ function handleDeleteTask() {
           console.log(err)
       })//end of ajax req adding delete....
       console.log(id);
-  }
+  }//End of handleDeleteTask function.
+  //Call to initiate on button click.
