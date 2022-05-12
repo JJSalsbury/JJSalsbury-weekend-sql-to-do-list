@@ -5,7 +5,7 @@ Weekend SQL To DO List
 ## Description
 _Duration: Weekend Homework Assignment (Thurs-Fri)_
 
-I created an application that create a front end experience which allows a user to create a task, add it to a list, update status and delete task items.
+I created an application that provides a front end experience which allows a user to create a task, add it to a list, update status and delete task items.
 
 Once user input is submitted using a submit button, the app collects the information, stores it to a database. Information is displayed on the webpage including task name and task status.
 
